@@ -19,4 +19,6 @@ alias t="tree"
 
 alias graph="git log --all --decorate --oneline --graph"
 
+alias gtree="git ls-tree -r --name-only"
+
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
