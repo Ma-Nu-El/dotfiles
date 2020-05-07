@@ -1,24 +1,19 @@
 shopt -s autocd
-
 git config --global core.editor "vim"
-
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 alias .="ls"
 alias .a="ls -a"
 alias ..="cd .."
 alias p="pwd"
 alias h="cd ~"
-
 alias E="exit"
-
 alias e="emacs -nw"
 alias v="vim"
-
 alias t="tree"
-
+alias gca="git commit -a"
+alias gp="git push"
 alias graph="git log --all --decorate --oneline --graph"
-
-alias gtree="git ls-tree -r --name-only"
-
+alias gt="git ls-tree -r --name-only"
+alias gth="git ls-tree -r --name-only HEAD"
+alias gtm="git ls-tree -r --name-only master"
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
