@@ -2,7 +2,7 @@ shopt -s autocd
 git config --global core.editor "vim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias .="ls -1"
-alias .a="ls -a"
+alias .a="ls -a -1"
 alias ..="cd .."
 alias p="pwd"
 alias h="cd ~"
