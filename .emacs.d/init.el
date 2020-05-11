@@ -86,7 +86,9 @@ package-archive-priorities
 (global-set-key "\C-ct" 'org-insert-structure-template)
 (global-set-key "\C-cp" 'org-fill-paragraph)
 (global-set-key "\C-c\C-xw" 'ispell-word)
-(setq org-src-fontify-natively t)
+(custom-set-variables
+ '(org-src-fontify-natively t)
+ )
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
