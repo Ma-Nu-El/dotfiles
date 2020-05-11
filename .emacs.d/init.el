@@ -118,13 +118,5 @@ package-archive-priorities
    )
  )
 
-(use-package magit
-  :ensure t
-  :init
-  (progn
-    (bind-key "C-x g" 'magit-status)
-    )
-  )
-
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (add-hook 'org-mode-hook 'flyspell-mode)
