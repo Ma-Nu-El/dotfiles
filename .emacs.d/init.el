@@ -29,6 +29,8 @@ package-archive-priorities
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-hl-line-mode)
 (set-face-background hl-line-face "gray53")
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
 (menu-bar-mode -1)
 (use-package undo-tree
   :ensure t
