@@ -1,0 +1,13 @@
+defmousetrack on
+startup_message off
+layout save default
+vbell off
+
+termcapinfo xterm* ti@:te@
+
+term xterm-256color
+defbce on
+
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
