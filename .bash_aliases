@@ -25,5 +25,5 @@ alias tmns="tmux new -s" # append your session name to be created
 alias tmks="tmux kill-session -t" # append your session name to be killed
 alias tmls="tmux ls" # list sessions # <prefix> s
 alias tma="tmux attach-session" # attach to last session
-alias tmas="tmux attach-session -t " # append your session name to be attached to
+alias tmas="tmux attach-session -t" # append your session name to be attached to
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
