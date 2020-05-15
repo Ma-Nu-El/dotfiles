@@ -1,15 +1,19 @@
+echo "loaded .bash_aliases"
 shopt -s autocd
 git config --global core.editor "vim"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias .="ls -1"
+alias a="ls -1"
 alias .a="ls -a -1"
 alias ..="cd .."
 alias p="pwd"
 alias h="cd ~"
 alias E="exit"
 alias v="vim"
-alias ec='emacsclient -a "" -t'
+alias lgrep='ls | grep' # append your simple grep search
+alias lagrep='ls -a | grep' # append your simple grep search
 alias ed="emacs --daemon"
+alias ec='emacsclient -t' # attach to the emacs server
+alias ecs='emacsclient -t -s' # append your server name to be attached to
 alias tr="tree"
 alias gst="git status"
 alias gca="git commit -a"
