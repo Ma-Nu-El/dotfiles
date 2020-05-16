@@ -2,9 +2,6 @@
 echo "loaded .bash_aliases"
 shopt -s autocd
 git config --global core.editor "vim"
-els(){
-ls -1 /tmp/emacs${UID}
-}
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias a="ls -1"
 alias .a="ls -a -1"
@@ -35,3 +32,11 @@ alias tml="tmux ls" # list sessions # <prefix> s
 alias tma="tmux attach-session" # attach to last session
 alias tmas="tmux attach-session -t" # append your session name to be attached to
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
+els(){
+ls -1 /tmp/emacs${UID}
+}
+alias edn="emacs-daemon-new"
+emacs-daemon-new(){
+emacs --daemon=$1
+echo "Creating emacs daemon with name:" $1
+}
