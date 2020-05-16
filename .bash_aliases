@@ -41,7 +41,4 @@ emacs-daemon-new(){
 emacs --daemon=$1
 echo "Creating emacs daemon with name:" $1
 }
-uni(){
-tmux new -s $1
-}
 echo "loaded .bash_aliases"
