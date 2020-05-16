@@ -1,7 +1,8 @@
 #!/usr/share/env bash
-echo "loaded .bash_aliases"
+echo "loading .bash_aliases"
 shopt -s autocd
 git config --global core.editor "vim"
+echo "enabled Bash built-ins"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias a="ls -1"
 alias .a="ls -a -1"
@@ -40,3 +41,9 @@ emacs-daemon-new(){
 emacs --daemon=$1
 echo "Creating emacs daemon with name:" $1
 }
+uni(){
+$1 = teeeest
+tmux new -s $1
+echo "loaded uni function named " $1
+}
+echo "loaded .bash_aliases"
