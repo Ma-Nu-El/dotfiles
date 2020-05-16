@@ -1,6 +1,10 @@
+#!/usr/share/env bash
 echo "loaded .bash_aliases"
 shopt -s autocd
 git config --global core.editor "vim"
+els(){
+ls -1 /tmp/emacs${UID}
+}
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias a="ls -1"
 alias .a="ls -a -1"

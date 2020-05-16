@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# print list of emacs servers
-els(){
-ls -1 /tmp/emacs${UID}
-}
