@@ -13,8 +13,10 @@ alias E="exit"
 alias v="vim"
 alias lgrep='ls | grep' # append your simple grep search
 alias lagrep='ls -a | grep' # append your simple grep search
-alias ed="emacs --daemon"
-alias ec='emacsclient -t' # attach to the emacs server
+alias ed="emacs --daemon" # creates default emacs server named 'server'
+alias edn="emacs-daemon-new" # append your emacs daemon name
+alias els="ls -1 /tmp/emacs${UID}"
+alias ec='emacsclient -t' # attach to the default emacs server
 alias ecs='emacsclient -t -s' # append your server name to be attached to
 alias tr="tree"
 alias gst="git status"
@@ -25,20 +27,18 @@ alias graph="git log --all --decorate --oneline --graph"
 alias gt="git ls-tree -r --name-only"
 alias gth="git ls-tree -r --name-only HEAD"
 alias gtm="git ls-tree -r --name-only master"
-alias tm="tmux"
-alias tmn="tmux new-session" # create session with default name
-alias tmns="tmux new -s" # append your session name to be created
-alias tmks="tmux kill-session -t" # append your session name to be killed
-alias tml="tmux ls" # list sessions # <prefix> s
-alias tma="tmux attach-session" # attach to last session
-alias tmas="tmux attach-session -t" # append your session name to be attached to
+alias t="tmux"
+alias tn="tmux new-session" # create session with default name
+alias tns="tmux new -s" # append your session name to be created
+alias tks="tmux kill-session -t" # append your session name to be killed
+alias tl="tmux ls" # list sessions # <prefix> s
+alias ta="tmux attach-session" # attach to last session
+alias tas="tmux attach-session -t" # append your session name to be attached to
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
-els(){
-ls -1 /tmp/emacs${UID}
-}
-alias edn="emacs-daemon-new"
+echo "loaded aliases"
 emacs-daemon-new(){
 emacs --daemon=$1
-echo "Creating emacs daemon with name:" $1
+echo "Created emacs daemon named:" $1
 }
+echo "loaded functions"
 echo "loaded .bash_aliases"
