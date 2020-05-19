@@ -1,6 +1,12 @@
 #!/usr/share/env bash
 echo "loading .bash_aliases"
-export PS1="\[$(tput bold)\]\[\033[48;5;0m\]-[\t]-[\[$(tput sgr0)\]\[\033[38;5;2m\]\u@\H\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\]]\n-\\$ \[$(tput sgr0)\]"
+export PS1="\
+\[\
+\033[\
+1;40m\
+insert all your stuff here, the boldness and black background are set
+\033[m\
+"
 shopt -s autocd
 git config --global core.editor "vim"
 echo "enabled Bash built-ins"
