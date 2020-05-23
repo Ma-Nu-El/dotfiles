@@ -45,9 +45,14 @@ package-archive-priorities
 (evil-mode 1)
 (load-theme 'tango-dark)
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-export-backends (quote (ascii html icalendar latex md)))
+ '(org-src-fontify-natively t)
  '(show-paren-mode t)
- '(show-paren-when-point-inside-paren t)
- )
+ '(show-paren-when-point-inside-paren t))
 (use-package ivy
  :ensure t
  :diminish (ivy-mode)
@@ -88,9 +93,7 @@ package-archive-priorities
 (global-set-key "\C-ct" 'org-insert-structure-template)
 (global-set-key "\C-cp" 'org-fill-paragraph)
 (global-set-key "\C-c\C-xw" 'ispell-word)
-(custom-set-variables
- '(org-src-fontify-natively t)
- )
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
@@ -101,3 +104,9 @@ package-archive-priorities
  )
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (add-hook 'org-mode-hook 'flyspell-mode)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
