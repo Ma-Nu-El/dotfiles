@@ -1,7 +1,6 @@
 #!/usr/share/env bash
 echo "loading .bash_aliases"
 export PS1='\
-\[\033[40m\]\
 \[\033[1;37m\]\
 ┌─[\
 \[\033[1;33m\]\
