@@ -99,6 +99,7 @@ package-archive-priorities
    (emacs-lisp . t)
    (shell . t)
    (sql . t)
+   (java . t)
    )
  )
 (add-hook 'org-mode-hook 'auto-fill-mode)
