@@ -45,7 +45,7 @@ package-archive-priorities
 (evil-mode 1)
 (load-theme 'tango-dark)
 (custom-set-variables
-'(org-export-backends (quote (ascii html icalendar latex md)))
+'(org-export-backends (quote (ascii html icalendar latex md org)))
 '(org-src-fontify-natively t)
 '(show-paren-mode t)
 '(show-paren-when-point-inside-paren t)
@@ -90,16 +90,12 @@ package-archive-priorities
 (global-set-key "\C-ct" 'org-insert-structure-template)
 (global-set-key "\C-cp" 'org-fill-paragraph)
 (global-set-key "\C-c\C-xw" 'ispell-word)
-(custom-set-variables
- '(org-src-fontify-natively t)
- )
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
    (emacs-lisp . t)
    (shell . t)
    (sql . t)
-   (java . t)
    )
  )
 (add-hook 'org-mode-hook 'auto-fill-mode)
