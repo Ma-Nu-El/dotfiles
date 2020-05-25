@@ -100,3 +100,4 @@ package-archive-priorities
  )
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (add-hook 'org-mode-hook 'flyspell-mode)
+(define-key evil-motion-state-map (kbd "C-z") nil)
