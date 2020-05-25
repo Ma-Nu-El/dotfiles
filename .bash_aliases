@@ -32,12 +32,12 @@ alias E="exit"
 alias v="vim"
 alias lgrep='ls | grep' # append your simple grep search
 alias lagrep='ls -a | grep' # append your simple grep search
+alias temp='systemp'
 alias ed="emacs --daemon" # creates default emacs server named 'server'
 alias edn="emacs-daemon-new" # append your emacs daemon name
 alias els="ls -1 /tmp/emacs${UID}"
 alias ec='emacsclient -t' # attach to the default emacs server
 alias ecs='emacsclient -t -s' # append your server name to be attached to
-alias tr="tree"
 alias gst="git status"
 alias gca="git commit -a"
 alias gcam="git commit -am"
@@ -58,6 +58,9 @@ echo "loaded aliases"
 emacs-daemon-new(){
 emacs --daemon=$1
 echo "Created emacs daemon named:" $1
+}
+systemp(){
+sensors | grep 'id 0' | tr -s ' ' | cut -d' ' -f4 | cut -b 2-
 }
 echo "loaded functions"
 echo "loaded .bash_aliases"

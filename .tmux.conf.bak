@@ -12,19 +12,25 @@ set-option -g status-position bottom
 set-option -g status-interval 1
 set-option -g status-keys vi
 set-option -g status \
-on
-set -g status-right-length 200
-set -g status-right ''
-set -ag status-right '[RAM: #{ram_percentage}] '
-set -ag status-right '[CPU: #{cpu_percentage}] '
+2
+set -g status-format[0] '#[align=left]#(whoami)@#(hostname)'
+set -ag status-format[0] '#[align=centre]session: #{session_name} - window: #{window_index}'
+set -ag status-format[0] '#[align=right] #(date)'
+set -g status-format[1] '#[align=left]'
+set -g @online_icon "online"
+set -g @offline_icon "offline"
+set -ag status-format[1] '#[align=centre]#{online_status}'
+set -ag status-format[1] '#[align=right]#{battery_status_bg} Batt: #{battery_icon} #{battery_percentage} #{battery_remain}'
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @plugin 'tmux-plugins/tmux-online-status'
 set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-sessionist'
+set -g @plugin 'tmux-plugins/tmux-net-speed'
 set -g @plugin 'tmux-plugins/tmux-sidebar'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
