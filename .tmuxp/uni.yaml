@@ -1,0 +1,19 @@
+session_name: uni
+windows:
+- layout: b29d,90x24,0,0,0
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: emacsclient
+  start_directory: /home/ma
+  window_name: org-file
+- focus: 'true'
+  layout: b29e,90x24,0,0,1
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: python3
+  start_directory: /home/ma
+  window_name: command line
