@@ -59,8 +59,5 @@ emacs-daemon-new(){
 emacs --daemon=$1
 echo "Created emacs daemon named:" $1
 }
-systemp(){
-sensors | grep 'id 0' | tr -s ' ' | cut -d' ' -f4 | cut -b 2-
-}
 echo "loaded functions"
 echo "loaded .bash_aliases"
