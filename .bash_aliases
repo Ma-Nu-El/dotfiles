@@ -53,6 +53,7 @@ alias tks="tmux kill-session -t" # append your session name to be killed
 alias tls="tmux ls" # list sessions # <prefix> s
 alias ta="tmux attach-session" # attach to last session
 alias tas="tmux attach-session -t" # append your session name to be attached to
+alias tpls="ls ~/.tmuxp/"
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
 echo "loaded aliases"
 emacs-daemon-new(){
