@@ -14,6 +14,5 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: python3
   start_directory: /home/ma
   window_name: command line
