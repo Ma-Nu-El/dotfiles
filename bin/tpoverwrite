@@ -17,11 +17,14 @@ echo 'USAGE'
 echo ''\''tpoverwrite OPTION'\'''
 echo ''
 echo 'OPTIONS'
-echo '--overwrite (or -o)'
+echo '-o'
+echo '--overwrite'
 echo 'overwrite your EXISTING tmuxp frozen file'
 echo ''
-echo '--depython (or -d)'
+echo '--depython'
 echo 'remove that '\''python3'\'' line from the frozen file'
+echo '--debash'
+echo 'remove that '\''bash'\'' line from the frozen file'
 echo 'for the moment it only works with .yaml files since I don'\''t know yet'
 echo 'how to implement TAB completion from within a bash script :D'
 echo 'Happy coding'
@@ -53,7 +56,7 @@ echo 'to'
 echo \'$YOUR_FILE\'
 fi
 fi
-if [[ "$1" == "-d" ]] || [[ "$1" == "--depython" ]]
+if [[ "$1" == "--depython" ]]
 then
 echo 'Warning: if you actually are running anything that contains the word'
 echo 'python3 and gets saved into the session, it could mess with your'
@@ -66,6 +69,21 @@ AUX_FILE=$FILE_LOCATION/auxFile
 cat $YOUR_FILE > ~/.tmuxp/depython/$SESSION_NAME.$EXTENSION
 sed '/python3/d' $YOUR_FILE > $AUX_FILE
 cat $AUX_FILE > $YOUR_FILE
-echo 'file depythoned.'
+echo 'done: file depythoned.'
+fi
+if [[ "$1" == "--debash" ]]
+then
+echo 'Warning: if you actually are running anything that contains the word'
+echo ''\''bash'\'' and gets saved into the session, it could mess with your'
+echo 'tmuxp freeze file.'
+echo ''
+echo 'A backup of your file will be stored in'
+echo '/tmp/tmuxp/frozenPreCleaning/'
+echo 'in case anything goes wrong.'
+AUX_FILE=$FILE_LOCATION/auxFile
+cat $YOUR_FILE > ~/.tmuxp/depython/$SESSION_NAME.$EXTENSION
+sed '/shell_command:\ bash/d' $YOUR_FILE > $AUX_FILE
+cat $AUX_FILE > $YOUR_FILE
+echo 'done: file debashed.'
 fi
 exit
