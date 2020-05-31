@@ -5,7 +5,6 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: bash
   start_directory: /home/ma/sit-project
   window_name: org file
 - layout: c4a0,71x19,0,0,3
@@ -13,7 +12,6 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: bash
   start_directory: /home/ma/sit-project
   window_name: tangled
 - focus: 'true'
@@ -22,7 +20,6 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: bash
   start_directory: /home/ma/sit-project
   window_name: 'command line '
 - layout: c4a2,71x19,0,0,5
@@ -30,6 +27,5 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: bash
   start_directory: /home/ma
   window_name: bash info
