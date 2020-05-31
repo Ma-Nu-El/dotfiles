@@ -34,7 +34,7 @@
 //
 // However, FN key can't be re-mapped, so we'll have to settle with 
 // its inbuilt location and work with it as it is. It's not that bad
-// anyway since the most used key for my case are CTRL and ALT anyway.
+// anyway since the most used key for my case are CTRL and ALT.
 //
 // Improvise. Adapt. Overcome.
 //
