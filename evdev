@@ -103,18 +103,18 @@ default xkb_keycodes "evdev" {
 	<AB10> = 61;
 	<RTSH> = 62;
 // Bottom row (fifth)
-	<LALT> = 133;
-	<LCTL> = 64;
+	<LALT> = 64; // back to original
+	<LCTL> = 133; // back to original
 	<SPCE> = 65;
-	<RCTL> = 108; //RCTL: becomes RALT
-	<RALT> = 134; //was 105 //RALT: becomes RCTL //doesn't really work.
+	<RCTL> = 134; //RCTL: becomes RALT // was 108
+	<RALT> = 105; //was 105 //RALT: becomes RCTL //doesn't really work. // was 134
 					// Seems to be a problem with
 					// the keysymb.
 					// System reads 'Multi_key'
 					// instead of R_ALT.
 	// Microsoft keyboard extra keys
 	<LWIN> = 37;
-	//<RWIN> = 134;
+	<RWIN> = 134;
 	<COMP> = 135;
 	alias <MENU> = <COMP>;
 // Function row (sixth)
