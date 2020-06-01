@@ -20,14 +20,14 @@ export PS1='\
 \[\033[0m\]\
 '
 shopt -s autocd
-git config --global core.editor "vim"
+  git config --global core.editor "vim"
 echo "enabled Bash built-ins"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias a="ls -1"
-alias .a="ls -a -1"
-alias ..="cd .."
-alias p="pwd"
-alias h="cd ~"
+  alias a="ls -1"
+  alias .a="ls -a -1"
+  alias ..="cd .."
+  alias p="pwd"
+  alias h="cd ~"
 alias E="exit"
 alias v="vim"
 alias lgrep='ls | grep' # append your simple grep search
