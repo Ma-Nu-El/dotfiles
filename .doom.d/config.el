@@ -53,4 +53,8 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-;;(add-hook 'org-mode-hook 'flyspell-mode)
+(add-hook 'org-mode-hook 'flyspell-mode)
+
+;; TODO bind to org structure
+;; TODO bind to ispell-word
+;; TODO hide stars but not autoindent.
