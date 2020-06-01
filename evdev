@@ -104,7 +104,7 @@ default xkb_keycodes "evdev" {
 	<RTSH> = 62;
 // Bottom row (fifth)
 	<LALT> = 64; // back to original
-	<LCTL> = 133; // back to original
+	<LCTL> = 37; // back to original // was 133
 	<SPCE> = 65;
 	<RCTL> = 134; //RCTL: becomes RALT // was 108
 	<RALT> = 105; //was 105 //RALT: becomes RCTL //doesn't really work. // was 134
@@ -113,7 +113,7 @@ default xkb_keycodes "evdev" {
 					// System reads 'Multi_key'
 					// instead of R_ALT.
 	// Microsoft keyboard extra keys
-	<LWIN> = 37;
+	<LWIN> = 133; was 37
 	<RWIN> = 134;
 	<COMP> = 135;
 	alias <MENU> = <COMP>;
