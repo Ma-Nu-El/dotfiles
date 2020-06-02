@@ -58,6 +58,6 @@
 
 ;; TODO hide stars but not autoindent.
 (setq org-adapt-indentation nil)
-;(setq org-hide-leading-stars t)
+(setq org-hide-leading-stars t)
 
 ;; TODO bind to org structure
