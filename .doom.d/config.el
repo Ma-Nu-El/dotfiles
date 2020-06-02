@@ -53,8 +53,11 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+;; TODO bind to ispell-word
 (add-hook 'org-mode-hook 'flyspell-mode)
 
-;; TODO bind to org structure
-;; TODO bind to ispell-word
 ;; TODO hide stars but not autoindent.
+(setq org-adapt-indentation nil)
+;(setq org-hide-leading-stars t)
+
+;; TODO bind to org structure
