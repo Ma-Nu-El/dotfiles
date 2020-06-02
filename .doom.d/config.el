@@ -54,10 +54,14 @@
 ;; they are implemented.
 
 ;; TODO bind to ispell-word
-(add-hook 'org-mode-hook 'flyspell-mode)
-
 ;; TODO hide stars but not autoindent.
-(setq org-adapt-indentation nil)
-(setq org-hide-leading-stars t)
-
-;; TODO bind to org structure
+;(add-hook 'org-mode-hook 'flyspell-mode)
+;(add-hook 'org-mode-hook 'org-indent-mode nil)
+;(add-hook 'org-mode-hook 'org-hide-leading-stars t)
+(after! org
+  (setq org-hide-leading-stars t
+        org-startup-indented nil
+        flyspell-mode t
+        )
+  )
+;; TODO bind key to insert org template structure
