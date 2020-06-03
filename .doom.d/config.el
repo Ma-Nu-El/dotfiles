@@ -54,14 +54,14 @@
 ;; they are implemented.
 
 ;; TODO bind to ispell-word
-;; TODO hide stars but not autoindent.
-;(add-hook 'org-mode-hook 'flyspell-mode)
-;(add-hook 'org-mode-hook 'org-indent-mode nil)
-;(add-hook 'org-mode-hook 'org-hide-leading-stars t)
+;; ispell region actually
+;; TODO bind key to insert org template structure
+;;
 (after! org
   (setq org-hide-leading-stars t
         org-startup-indented nil
         flyspell-mode t
         )
   )
-;; TODO bind key to insert org template structure
+;; unbind C-z to function ; however don't 'C-z', it'll freeze emacs
+(define-key evil-motion-state-map (kbd "C-z") nil)

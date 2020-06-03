@@ -1,6 +1,6 @@
-# If everything works fine, then this .vimrc should never been
-# more than a hand rolled config. If you'd like a framework, the
-# you have Doom Emacs.
+" If everything works fine, then this .vimrc should never been
+" more than a hand rolled config. If you'd like a framework, the
+" you have Doom Emacs.
   :set number relativenumber
   :augroup numbertoggle
   :  autocmd!
