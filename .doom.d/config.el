@@ -65,4 +65,4 @@
   )
 ;; unbind C-z to function ; however don't 'C-z', it'll freeze emacs
 (define-key evil-motion-state-map (kbd "C-z") nil)
-(global-set-key (kbd "\C-c \C-r") 'ispell-region)
+(global-set-key (kbd "\C-cr") 'ispell-region)
