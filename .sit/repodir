@@ -1,9 +1,8 @@
 deploy
-.cfg
-sit-project
 uni
 bin
-choose
-tmuxp-overwrite
 org
-rig
+.cfg
+sit
+tmuxp-overwrite
+choose

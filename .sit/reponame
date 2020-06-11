@@ -1,9 +1,8 @@
 deploy
-dotfiles
-sit
 uni
 bin
-choose
-tmuxp-overwrite
 org
-rig
+dotfiles
+sit
+tmuxp-overwrite
+choose
