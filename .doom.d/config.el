@@ -52,17 +52,15 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
-
-;; TODO bind to ispell-word
-;; ispell region actually
-;; TODO bind key to insert org template structure
-;;
 (after! org
   (setq org-hide-leading-stars t
         org-startup-indented nil
         flyspell-mode t
         )
   )
-;; unbind C-z to function ; however don't 'C-z', it'll freeze emacs
 (define-key evil-motion-state-map (kbd "C-z") nil)
 (global-set-key (kbd "\C-cr") 'ispell-region)
+;; roam
+(setq org-roam-directory "~/org-roam")
+(add-hook 'after-init-hook 'org-roam-mode)
+(require 'org-roam-protocol)
