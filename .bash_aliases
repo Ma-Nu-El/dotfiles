@@ -2,22 +2,22 @@
 echo "loading .bash_aliases"
 export PS1='\
 \[\033[1;37m\]\
-\[\033[1;32m\]\
-\w\
-\n\
 \[\033[1;33m\]\
 \$ \
 \[\033[0m\]\
 '
 shopt -s autocd
-  git config --global core.editor "vim"
+git config --global core.editor "vim"
 echo "enabled Bash built-ins"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-  alias a="ls -1"
-  alias .a="ls -a -1"
-  alias ..="cd .."
-  alias p="pwd"
-  alias h="cd ~"
+alias gitt='/usr/bin/git --git-dir=$HOME/.git/ --work-tree=$HOME'
+alias hhh="pwd && echo '-----' && ls -a"
+alias a="ls -1"
+alias .a="ls -a -1"
+alias ..="cd .."
+alias p="pwd"
+alias h="cd ~"
+alias c='clear'
 alias E="exit"
 alias v="vim"
 alias lgrep='ls | grep' # append your simple grep search
@@ -50,8 +50,8 @@ alias tpls="ls ~/.tmuxp/"
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
 echo "loaded aliases"
 emacs-daemon-new(){
-emacs --daemon=$1
-echo "Created emacs daemon named:" $1
+ emacs --daemon=$1
+ echo "Created emacs daemon named:" $1
 }
 echo "loaded functions"
 echo "loaded .bash_aliases"
