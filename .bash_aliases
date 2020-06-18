@@ -7,27 +7,13 @@ export PS1='\
 \[\033[0m\]\
 '
 shopt -s autocd
-git config --global core.editor "vim"
+# vi
+git config --global core.editor "vi"
+export VISUAL=vi
+export EDITOR="$VISUAL"
 echo "enabled Bash built-ins"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias gitt='/usr/bin/git --git-dir=$HOME/.git/ --work-tree=$HOME'
-alias hhh="pwd && echo '-----' && ls -a"
-alias a="ls -1"
-alias .a="ls -a -1"
-alias ..="cd .."
-alias p="pwd"
-alias h="cd ~"
-alias c='clear'
-alias E="exit"
-alias v="vim"
-alias lgrep='ls | grep' # append your simple grep search
-alias lagrep='ls -a | grep' # append your simple grep search
-alias temp='systemp'
-alias ed="emacs --daemon" # creates default emacs server named 'server'
-alias edn="emacs-daemon-new" # append your emacs daemon name
-alias els="ls -1 /tmp/emacs${UID}"
-alias ec='emacsclient -t' # attach to the default emacs server
-alias ecs='emacsclient -t -s' # append your server name to be attached to
 alias gst="git status"
 alias gca="git commit -a"
 alias gcam="git commit -am"
@@ -36,9 +22,30 @@ alias graph="git log --all --decorate --oneline --graph"
 alias gt="git ls-tree -r --name-only"
 alias gth="git ls-tree -r --name-only HEAD"
 alias gtm="git ls-tree -r --name-only master"
+alias remote="git remote -v"
 alias ct="config ls-tree -r --name-only"
 alias cth="config ls-tree -r --name-only HEAD"
 alias ctm="config ls-tree -r --name-only master"
+alias c='clear'
+alias p="pwd"
+alias pp="clear && pwd"
+alias a="ls"
+alias aa="ls -a"
+alias pa="clear && pwd && echo '-----' && ls"
+alias paa="clear && pwd && echo '-----' && ls -a"
+alias pt="clear && pwd && echo '-----' && tree ./"
+alias lgrep='ls | grep' # append your simple grep search
+alias lagrep='ls -a | grep' # append your simple grep search
+alias ..="cd .."
+alias ...="cd ../../"
+alias h="cd ~"
+alias E="exit"
+alias v="vim"
+alias ed="emacs --daemon" # creates default emacs server named 'server'
+alias edn="emacs-daemon-new" # append your emacs daemon name
+alias els="ls -1 /tmp/emacs${UID}"
+alias ec='emacsclient -t' # attach to the default emacs server
+alias ecs='emacsclient -t -s' # append your server name to be attached to
 alias t="tmux"
 alias tn="tmux new-session" # create session with default name
 alias tns="tmux new -s" # append your session name to be created
@@ -46,12 +53,46 @@ alias tks="tmux kill-session -t" # append your session name to be killed
 alias tls="tmux ls" # list sessions # <prefix> s
 alias ta="tmux attach-session" # attach to last session
 alias tas="tmux attach-session -t" # append your session name to be attached to
-alias tpls="ls ~/.tmuxp/"
+#alias tpls="ls ~/.tmuxp/"
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
+alias temp='systemp'
 echo "loaded aliases"
-emacs-daemon-new(){
- emacs --daemon=$1
- echo "Created emacs daemon named:" $1
+cdf(){
+	if [[ -z "$1"  ]]
+	then
+		echo "vim to dotfile of...?"
+		echo "b = bash"
+		echo "v = vim"
+		echo "t = tmux"
+		echo "e = doom emacs"
+		echo "example: 'cdf v' is the same as"
+		echo "'vim $HOME/.vimrc'"
+	fi	
+	if [[ "$1" == "b" ]] 
+	then
+		vim $HOME/.bash_aliases
+	fi
+	if [[ "$1" == "t" ]]
+	then
+		vim $HOME/.tmux.conf
+	fi
+	if [[ "$1" == "v" ]]
+	then
+		vim $HOME/.vimrc
+	fi
+	if [[ "$1" == "e" ]]
+	then
+		vim $HOME/.doom.d/config.el
+	fi
+}
+manuclone(){
+	if [[ -z "$1"  ]]
+	then
+		echo "example: 'manuclone foo bar' is the same as"
+		echo "'git clone git@github..Nu-El/foo bar'"
+	else
+	git clone git@github.com:Ma-Nu-El/$1 
+	fi	
 }
 echo "loaded functions"
 echo "loaded .bash_aliases"

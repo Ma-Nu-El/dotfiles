@@ -57,6 +57,7 @@
         org-startup-indented nil
         flyspell-mode t
         )
+  (add-to-list 'org-export-backends 'org)
   )
 (define-key evil-motion-state-map (kbd "C-z") nil)
 (global-set-key (kbd "\C-cr") 'ispell-region)
