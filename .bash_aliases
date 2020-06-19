@@ -14,19 +14,23 @@ export EDITOR="$VISUAL"
 echo "enabled Bash built-ins"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias gitt='/usr/bin/git --git-dir=$HOME/.git/ --work-tree=$HOME'
+alias ginit='git init'
+alias gadd='git add'
 alias gst="git status"
 alias gca="git commit -a"
 alias gcam="git commit -am"
 alias gp="git push"
+alias gsm="git submodule"
+alias grv="git remote -v"
 alias graph="git log --all --decorate --oneline --graph"
 alias gt="git ls-tree -r --name-only"
 alias gth="git ls-tree -r --name-only HEAD"
 alias gtm="git ls-tree -r --name-only master"
-alias remote="git remote -v"
 alias ct="config ls-tree -r --name-only"
 alias cth="config ls-tree -r --name-only HEAD"
 alias ctm="config ls-tree -r --name-only master"
 alias c='clear'
+alias cand='clear &&'
 alias p="pwd"
 alias pp="clear && pwd"
 alias a="ls"
