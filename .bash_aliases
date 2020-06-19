@@ -12,6 +12,7 @@ git config --global core.editor "vi"
 export VISUAL=vi
 export EDITOR="$VISUAL"
 echo "enabled Bash built-ins"
+# git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias gitt='/usr/bin/git --git-dir=$HOME/.git/ --work-tree=$HOME'
 alias ginit='git init'
@@ -29,6 +30,7 @@ alias gtm="git ls-tree -r --name-only master"
 alias ct="config ls-tree -r --name-only"
 alias cth="config ls-tree -r --name-only HEAD"
 alias ctm="config ls-tree -r --name-only master"
+# shell interaction
 alias c='clear'
 alias cand='clear &&'
 alias p="pwd"
@@ -44,12 +46,14 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias h="cd ~"
 alias E="exit"
+# quick editor
 alias v="vim"
 alias ed="emacs --daemon" # creates default emacs server named 'server'
 alias edn="emacs-daemon-new" # append your emacs daemon name
 alias els="ls -1 /tmp/emacs${UID}"
 alias ec='emacsclient -t' # attach to the default emacs server
 alias ecs='emacsclient -t -s' # append your server name to be attached to
+# tmux
 alias t="tmux"
 alias tn="tmux new-session" # create session with default name
 alias tns="tmux new -s" # append your session name to be created
@@ -61,6 +65,7 @@ alias tas="tmux attach-session -t" # append your session name to be attached to
 alias fire="firefox --private-window >/dev/null 2>/dev/null &"
 alias temp='systemp'
 echo "loaded aliases"
+# dotfiles edition
 cdf(){
 	if [[ -z "$1"  ]]
 	then
@@ -89,6 +94,7 @@ cdf(){
 		vim $HOME/.doom.d/config.el
 	fi
 }
+# git clone from @Ma-Nu-El (github)
 manuclone(){
 	if [[ -z "$1"  ]]
 	then
