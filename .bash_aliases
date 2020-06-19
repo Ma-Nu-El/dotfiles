@@ -40,6 +40,7 @@ alias aa="ls -a"
 alias pa="clear && pwd && echo '-----' && ls"
 alias paa="clear && pwd && echo '-----' && ls -a"
 alias pt="clear && pwd && echo '-----' && tree ./"
+alias ct="clear && tree ./"
 alias lgrep='ls | grep' # append your simple grep search
 alias lagrep='ls -a | grep' # append your simple grep search
 alias ..="cd .."
