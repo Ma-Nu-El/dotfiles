@@ -30,6 +30,8 @@ alias gtm="git ls-tree -r --name-only master"
 alias ct="config ls-tree -r --name-only"
 alias cth="config ls-tree -r --name-only HEAD"
 alias ctm="config ls-tree -r --name-only master"
+alias gch="git checkout"
+alias gchm="git checkout master"
 # shell interaction
 alias c='clear'
 alias cnd='clear &&' 
